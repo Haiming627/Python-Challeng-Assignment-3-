@@ -10,8 +10,6 @@ csv_path = os.path.join('..','Resources','budget_data.csv')
 with open('budget_data.csv' , 'r') as bank_data:
     bank_data_reader = csv.reader(bank_data)
 
-#Total Months:
-
     next(bank_data_reader)
 
     bank_data_list = list(bank_data_reader)
@@ -43,7 +41,7 @@ for i in range(1,len(revenue)):
     profit_lastmon = profit_current
 greatest_increase = change_sum.index(max(change_sum))
 greatest_decrease = change_sum.index(min(change_sum))
-# print(monthlychanges)
+
 print("Average Change: $",(sum(change_sum)/len(change_sum)))
 print("Greatest Increase in Profits:", months[greatest_increase],max(change_sum))
 print("Greatest Decrease in Profits:", months[greatest_decrease],min(change_sum))

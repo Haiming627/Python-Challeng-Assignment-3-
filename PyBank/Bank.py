@@ -5,9 +5,9 @@ print("----------------------------------")
 import os
 import csv
 
-csv_path = os.path.join('..','Resources','budget_data.csv')
+csv_path = os.path.join('Resources_PyBank','budget_data.csv')
 
-with open('budget_data.csv' , 'r') as bank_data:
+with open(csv_path , 'r') as bank_data:
     bank_data_reader = csv.reader(bank_data)
 
     next(bank_data_reader)
@@ -22,7 +22,7 @@ print("Total :$",Total_Profit)
 months = []
 revenue = []
 
-with open('budget_data.csv' , 'r') as bank_data:
+with open(csv_path, 'r') as bank_data:
     bank_data_reader = csv.reader(bank_data)
 
     for row in bank_data_reader:
@@ -46,7 +46,14 @@ print("Average Change: $",(sum(change_sum)/len(change_sum)))
 print("Greatest Increase in Profits:", months[greatest_increase],max(change_sum))
 print("Greatest Decrease in Profits:", months[greatest_decrease],min(change_sum))
 
-
+with open('Analysis_Result_Pybank.txt','w') as text:
+    text.write('Financial Analysis\n')
+    text.write('-------------------------\n')
+    text.write(f"Total Months: {len(bank_data_list)}\n")
+    text.write(f"Total :${Total_Profit}\n")
+    text.write(f"Average Change: $ {(sum(change_sum)/len(change_sum))}\n")
+    text.write(f"Greatest Increase in Profits:{months[greatest_increase],max(change_sum)}\n")
+    text.write(f"Greatest Decrease in Profits:{(months[greatest_decrease],min(change_sum))}")
 
 
 

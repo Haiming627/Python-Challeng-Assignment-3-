@@ -7,7 +7,7 @@ import csv
 
 csv_path = os.path.join('Resources_PyPoll','election_data.csv')
 
-with open('election_data.csv' , 'r') as election_data:
+with open(csv_path, 'r') as election_data:
     election_data_reader = csv.reader(election_data, delimiter=",")
 
     next(election_data_reader)
@@ -40,6 +40,11 @@ elif row_count_Raymon > row_count_Charles and row_count_Raymon > row_count_Diana
   print("Winner: Raymon Anthony Doane")
 elif row_count_Diana > row_count_Charles and row_count_Diana > row_count_Raymon:
   print("Winner: Diana DeGette")
+
+# vote_counts = [row_count_Charles, row_count_Diana, row_count_Raymon]
+# winners_name = max(vote_counts)
+# print(winners_name)
+
 
 
 

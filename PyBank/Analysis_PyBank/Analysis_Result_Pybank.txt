@@ -1,8 +1,0 @@
-ase) Haimings-MBP:Resources_PyBank haimingwang$ /usr/bin/python2.7 "/Users/haimingwang/Desktop/Assignment Challenges/Python-Challeng-Assignment-3-/PyBank/Bank.py"
-Financial Analysis
-----------------------------------
-('Total Months:', 86)
-('Total :$', 22564198)
-('Average Change: $', 4448.127906976744)
-('Greatest Increase in Profits:', 'Aug-16', 1862002.0)
-('Greatest Decrease in Profits:', 'Feb-14', -1825558.0)
